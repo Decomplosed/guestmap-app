@@ -28,7 +28,7 @@ class App extends Component {
   }
 
   render() {
-    const position = [this.state.lat, this.state.lng]
+    const position = [this.state.location.lat, this.state.location.lng]
 
     return (
       <Map className='map' center={position} zoom={this.state.zoom}>
