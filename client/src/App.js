@@ -14,8 +14,10 @@ let myIcon = L.icon({
 
 class App extends Component {
   state = {
-    lat: 51.505,
-    lng: -0.09,
+    location: {
+      lat: 51.505,
+      lng: -0.09,
+    },
     zoom: 13,
   }
 
