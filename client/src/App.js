@@ -28,9 +28,10 @@ class App extends Component {
         location: {
           lat: position.coords.latitude,
           lng: position.coords.longitude,
+          haveUserLocation: true,
+          zoom: 10,
         },
       })
-      console.log(position)
     })
   }
 
