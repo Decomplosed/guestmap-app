@@ -23,16 +23,23 @@ class App extends Component {
   }
 
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition((position) => {
-      this.setState({
-        location: {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        },
-        haveUserLocation: true,
-        zoom: 10,
-      })
-    })
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        this.setState({
+          location: {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          },
+          haveUserLocation: true,
+          zoom: 10,
+        })
+      },
+      () => {
+        fetch('https://ipapi.co/json')
+          .then((res) => res.json())
+          .then((location) => console.log(location))
+      }
+    )
   }
 
   render() {
