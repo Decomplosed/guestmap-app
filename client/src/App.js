@@ -5,6 +5,12 @@ import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import './App.css'
 
 class App extends Component {
+  state = {
+    lat: 51.505,
+    lng: -0.09,
+    zoom: 13,
+  }
+
   render() {
     return (
       <Map center={position} zoom={this.state.zoom}>
