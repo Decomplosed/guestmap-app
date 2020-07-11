@@ -12,6 +12,8 @@ class App extends Component {
   }
 
   render() {
+    const position = [this.state.lat, this.state.lng]
+
     return (
       <Map center={position} zoom={this.state.zoom}>
         <TileLayer
