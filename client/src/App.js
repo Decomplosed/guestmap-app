@@ -19,7 +19,11 @@ class App extends Component {
     zoom: 13,
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      console.log(position)
+    })
+  }
 
   render() {
     const position = [this.state.lat, this.state.lng]
