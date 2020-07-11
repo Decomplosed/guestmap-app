@@ -18,7 +18,7 @@ class App extends Component {
       lat: 51.505,
       lng: -0.09,
     },
-    zoom: 3,
+    zoom: 2,
     haveUserLocation: false,
   }
 
