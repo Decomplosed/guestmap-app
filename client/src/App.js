@@ -19,6 +19,8 @@ class App extends Component {
     zoom: 13,
   }
 
+  componentDidMount() {}
+
   render() {
     const position = [this.state.lat, this.state.lng]
 
