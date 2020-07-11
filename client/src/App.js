@@ -19,6 +19,7 @@ class App extends Component {
       lng: -0.09,
     },
     zoom: 3,
+    haveUserLocation: false,
   }
 
   componentDidMount() {
