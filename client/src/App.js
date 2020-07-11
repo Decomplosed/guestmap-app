@@ -23,6 +23,12 @@ class App extends Component {
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition((position) => {
+      this.setState({
+        location: {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        },
+      })
       console.log(position)
     })
   }
