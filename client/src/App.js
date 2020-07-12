@@ -70,10 +70,10 @@ class App extends Component {
             </Marker>
           ) : null}
         </Map>
-        <Card body>
-          <CardTitle>Card Title</CardTitle>
-          <CardText>Text</CardText>
-          <Button>Go somewhere</Button>
+        <Card body className='messageForm'>
+          <CardTitle>Message App!</CardTitle>
+          <CardText>Say hi to other developers all around the world!</CardText>
+          <Button>Go on!</Button>
         </Card>
       </div>
     )
