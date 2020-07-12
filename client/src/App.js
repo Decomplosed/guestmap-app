@@ -69,6 +69,11 @@ class App extends Component {
           </Marker>
         ) : null}
       </Map>
+      <Card body>
+        <CardTitle>Card Title</CardTitle>
+        <CardText>Text</CardText>
+        <Button>Go somewhere</Button>
+      </Card>
     )
   }
 }
