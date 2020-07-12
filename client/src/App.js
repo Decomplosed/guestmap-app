@@ -71,6 +71,7 @@ class App extends Component {
   }
 
   changeInputValue = (event) => {
+    const { name, value } = event.target
     this.setState((prevState) => ({
       userMessage: {
         ...prevState,
