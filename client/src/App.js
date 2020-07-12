@@ -61,6 +61,8 @@ class App extends Component {
     )
   }
 
+  formSubmitted = (event) => {}
+
   render() {
     const position = [this.state.location.lat, this.state.location.lng]
 
