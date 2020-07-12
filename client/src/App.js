@@ -96,7 +96,9 @@ class App extends Component {
                 id='message'
                 placeholder='Message...'
               />
-              <Button color='info'>Send</Button>
+              <Button type='submit' color='info'>
+                Send
+              </Button>
             </FormGroup>
           </Form>
         </Card>
