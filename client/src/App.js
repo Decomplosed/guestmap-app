@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import L from 'leaflet'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import {Card, CardTitle, CardText, Button} from 'bootstrap'
+import { Card, CardTitle, CardText, Button } from 'bootstrap'
 
 import './App.css'
 
