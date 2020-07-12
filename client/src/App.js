@@ -67,14 +67,16 @@ class App extends Component {
 
   formSubmitted = (event) => {
     event.preventDefault()
+    console.log(this.state.userMessage)
   }
 
   changeInputValue = (event) => {
-    this.setState({
+    this.setState((prevState) => ({
       userMessage: {
-        [event.target.name]: event.target.value,
+        ...prevState,
+        [event.taget.name]: event.target.value,
       },
-    })
+    }))
   }
 
   render() {
