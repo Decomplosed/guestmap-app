@@ -69,6 +69,8 @@ class App extends Component {
     event.preventDefault()
   }
 
+
+
   render() {
     const position = [this.state.location.lat, this.state.location.lng]
 
@@ -95,7 +97,7 @@ class App extends Component {
             <FormGroup>
               <Label for='name'>Name</Label>
               <Input
-                onChange={this.changeValue}
+                onChange={this.changeInputValue}
                 type='text'
                 name='name'
                 id='name'
@@ -105,7 +107,7 @@ class App extends Component {
             <FormGroup>
               <Label for='message'>Message</Label>
               <Input
-                onChange={this.changeValue}
+                onChange={this.changeInputValue}
                 type='textarea'
                 name='message'
                 id='message'
