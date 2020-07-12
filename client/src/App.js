@@ -83,7 +83,7 @@ class App extends Component {
           <CardTitle>Message App!</CardTitle>
           <CardText>Say hi to other developers all around the world!</CardText>
           <CardText>Leave a message with your location!</CardText>
-          <Form>
+          <Form onSubmit={this.formSubmitted}>
             <FormGroup>
               <Label for='name'>Name</Label>
               <Input type='text' name='name' id='name' placeholder='Name...' />
