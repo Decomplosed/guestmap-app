@@ -69,7 +69,13 @@ class App extends Component {
     event.preventDefault()
   }
 
-  changeInputValue = (event) => {}
+  changeInputValue = (event) => {
+    this.setState({
+      userMessage: {
+        [event.target.name]: event.target.value,
+      },
+    })
+  }
 
   render() {
     const position = [this.state.location.lat, this.state.location.lng]
