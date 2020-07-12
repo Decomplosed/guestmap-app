@@ -56,24 +56,26 @@ class App extends Component {
     const position = [this.state.location.lat, this.state.location.lng]
 
     return (
-      <Map className='map' center={position} zoom={this.state.zoom}>
-        <TileLayer
-          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-        />
-        {this.state.haveUserLocation ? (
-          <Marker position={position} icon={myIcon}>
-            <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
-            </Popup>
-          </Marker>
-        ) : null}
-      </Map>
-      <Card body>
-        <CardTitle>Card Title</CardTitle>
-        <CardText>Text</CardText>
-        <Button>Go somewhere</Button>
-      </Card>
+      <>
+        <Map className='map' center={position} zoom={this.state.zoom}>
+          <TileLayer
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+          />
+          {this.state.haveUserLocation ? (
+            <Marker position={position} icon={myIcon}>
+              <Popup>
+                A pretty CSS3 popup. <br /> Easily customizable.
+              </Popup>
+            </Marker>
+          ) : null}
+        </Map>
+        <Card body>
+          <CardTitle>Card Title</CardTitle>
+          <CardText>Text</CardText>
+          <Button>Go somewhere</Button>
+        </Card>
+      </>
     )
   }
 }
