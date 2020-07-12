@@ -90,7 +90,7 @@ class App extends Component {
             <FormGroup>
               <Label for='message'>Message</Label>
               <Input
-                type='text'
+                type='textarea'
                 name='message'
                 id='message'
                 placeholder='Message...'
