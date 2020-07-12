@@ -56,7 +56,7 @@ class App extends Component {
     const position = [this.state.location.lat, this.state.location.lng]
 
     return (
-      <>
+      <div className='map'>
         <Map className='map' center={position} zoom={this.state.zoom}>
           <TileLayer
             attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
@@ -75,7 +75,7 @@ class App extends Component {
           <CardText>Text</CardText>
           <Button>Go somewhere</Button>
         </Card>
-      </>
+      </div>
     )
   }
 }
