@@ -1,7 +1,16 @@
 import React, { Component } from 'react'
 import L from 'leaflet'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import { Card, CardTitle, CardText, Button } from 'reactstrap'
+import {
+  Card,
+  CardTitle,
+  CardText,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Button,
+} from 'reactstrap'
 
 import './App.css'
 
@@ -73,7 +82,6 @@ class App extends Component {
         <Card body className='messageForm'>
           <CardTitle>Message App!</CardTitle>
           <CardText>Say hi to other developers all around the world!</CardText>
-          <Button>Go on!</Button>
         </Card>
       </div>
     )
