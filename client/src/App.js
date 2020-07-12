@@ -123,7 +123,11 @@ class App extends Component {
                 placeholder='Message...'
               />
             </FormGroup>
-            <Button type='submit' color='info'>
+            <Button
+              type='submit'
+              color='info'
+              disabled={!this.state.haveUserLocation}
+            >
               Send
             </Button>
           </Form>
