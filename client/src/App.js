@@ -74,8 +74,8 @@ class App extends Component {
     const { name, value } = event.target
     this.setState((prevState) => ({
       userMessage: {
-        ...prevState,
-        [event.taget.name]: event.target.value,
+        ...prevState.userMessage,
+        [name]: value,
       },
     }))
   }
