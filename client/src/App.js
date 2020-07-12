@@ -69,7 +69,7 @@ class App extends Component {
     event.preventDefault()
   }
 
-
+  changeInputValue = (event) => {}
 
   render() {
     const position = [this.state.location.lat, this.state.location.lng]
