@@ -4,6 +4,7 @@ import './index.css'
 import App from './App'
 
 import 'leaflet/dist/leaflet.css'
+import 'bootstrap/dist/css/bootstrap.css'
 
 ReactDOM.render(
   <React.StrictMode>
