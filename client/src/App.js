@@ -30,6 +30,10 @@ class App extends Component {
     },
     zoom: 2,
     haveUserLocation: false,
+    userMessage: {
+      name: '',
+      message: '',
+    },
   }
 
   componentDidMount() {
