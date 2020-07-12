@@ -87,6 +87,15 @@ class App extends Component {
               <Label for='name'>Name</Label>
               <Input type='text' name='name' id='name' placeholder='Name...' />
             </FormGroup>
+            <FormGroup>
+              <Label for='message'>Message</Label>
+              <Input
+                type='text'
+                name='message'
+                id='message'
+                placeholder='Message...'
+              />
+            </FormGroup>
           </Form>
         </Card>
       </div>
