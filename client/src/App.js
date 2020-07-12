@@ -82,6 +82,7 @@ class App extends Component {
         <Card body className='messageForm'>
           <CardTitle>Message App!</CardTitle>
           <CardText>Say hi to other developers all around the world!</CardText>
+          <CardText>Leave a message with your location!</CardText>
           <Form>
             <FormGroup>
               <Label for='name'>Name</Label>
