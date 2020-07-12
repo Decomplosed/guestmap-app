@@ -94,11 +94,18 @@ class App extends Component {
           <Form onSubmit={this.formSubmitted}>
             <FormGroup>
               <Label for='name'>Name</Label>
-              <Input type='text' name='name' id='name' placeholder='Name...' />
+              <Input
+                onChange={this.changeValue}
+                type='text'
+                name='name'
+                id='name'
+                placeholder='Name...'
+              />
             </FormGroup>
             <FormGroup>
               <Label for='message'>Message</Label>
               <Input
+                onChange={this.changeValue}
                 type='textarea'
                 name='message'
                 id='message'
