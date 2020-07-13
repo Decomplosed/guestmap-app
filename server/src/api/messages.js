@@ -21,7 +21,7 @@ router.post('/', (req, res, next) => {
     // add current time
     res.json([])
   } else {
-    
+    next(result.error)
   }
 })
 
