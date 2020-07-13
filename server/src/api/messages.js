@@ -23,6 +23,7 @@ router.post('/', (req, res, next) => {
       message,
       latitude,
       longitude,
+      date: new Date(),
     }
     //insert into DB
     // add current time
