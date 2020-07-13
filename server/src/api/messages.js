@@ -15,6 +15,7 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
+  const result = Joi.validate(req.body, schema))
   res.json([])
 })
 
