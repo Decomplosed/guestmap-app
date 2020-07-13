@@ -10,6 +10,6 @@ router.get('/', (req, res) => {
   })
 })
 
-router.use('/emojis', emojis)
+router.use('/messages', messages)
 
 module.exports = router
