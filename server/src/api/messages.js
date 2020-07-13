@@ -28,9 +28,9 @@ router.post('/', (req, res, next) => {
       longitude,
       date: new Date(),
     }
-    //insert into DB
-    // add current time
-    res.json([])
+    messages.insert(userMessage).then((insertedMessage) => {
+      res.json(insertedMessage)
+    })
   } else {
     next(result.error)
   }
