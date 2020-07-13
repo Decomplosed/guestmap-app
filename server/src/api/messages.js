@@ -14,12 +14,14 @@ router.get('/', (req, res) => {
   res.json([])
 })
 
-router.post('/', (req, res) => {
+router.post('/', (req, res, next) => {
   const result = Joi.validate(req.body, schema)
   if (result.error === null) {
     //insert into DB
     // add current time
     res.json([])
+  } else {
+    
   }
 })
 
