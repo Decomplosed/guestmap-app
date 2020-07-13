@@ -18,6 +18,12 @@ router.post('/', (req, res, next) => {
   const result = Joi.validate(req.body, schema)
   if (result.error === null) {
     const { name, message, latitude, longitude } = req.body
+    const userMessage = {
+      name,
+      message,
+      latitude,
+      longitude,
+    }
     //insert into DB
     // add current time
     res.json([])
