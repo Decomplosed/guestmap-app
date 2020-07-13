@@ -17,5 +17,6 @@ describe('GET /api/v1', () => {
 describe('GET /api/v1/messages', () => {
   it('responds with inserted message', (done) => {
     request(app)
+      .post('/api/v1/messages')
   });
 });
