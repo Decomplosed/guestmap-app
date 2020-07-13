@@ -8,15 +8,23 @@ describe('GET /api/v1', () => {
       .get('/api/v1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200, {
-        message: 'API - 👋🌎🌍🌏'
-      }, done);
-  });
-});
+      .expect(
+        200,
+        {
+          message: 'API - 👋🌎🌍🌏',
+        },
+        done
+      )
+  })
+})
 
 describe('GET /api/v1/messages', () => {
   it('responds with inserted message', (done) => {
-    request(app)
-      .post('/api/v1/messages')
-  });
-});
+    request(app).post('/api/v1/messages').body({
+      name: 'Bart',
+      message: 'Super App!',
+      latitude: 54.3854637,
+      longitude: 18.590565,
+    })
+  })
+})
