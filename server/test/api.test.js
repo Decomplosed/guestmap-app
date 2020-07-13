@@ -20,6 +20,13 @@ describe('GET /api/v1', () => {
 
 describe('GET /api/v1/messages', () => {
   it('responds with inserted message', (done) => {
+    const result = {
+      name: 'Bart',
+      message: 'Super App!',
+      latitude: 54.3854637,
+      longitude: 18.590565,
+    }
+
     request(app).post('/api/v1/messages').body({
       name: 'Bart',
       message: 'Super App!',
