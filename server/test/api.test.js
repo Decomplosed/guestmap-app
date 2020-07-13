@@ -29,7 +29,7 @@ describe('GET /api/v1/messages', () => {
 
     request(app)
       .post('/api/v1/messages')
-      .body(result)
+      .send(result)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(200, result, done)
