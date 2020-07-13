@@ -17,6 +17,8 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   const result = Joi.validate(req.body, schema)
   if (result.error === null) {
+    //insert into DB
+    // add current time
     res.json([])
   }
 })
