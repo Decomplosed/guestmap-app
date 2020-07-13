@@ -15,8 +15,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const result = Joi.validate(req.body, schema))
-  res.json([])
+  const result = Joi.validate(req.body, schema)
+  if (result.error === null) {
+    res.json([])
+  }
 })
 
 module.exports = router
