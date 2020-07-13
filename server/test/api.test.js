@@ -27,11 +27,11 @@ describe('GET /api/v1/messages', () => {
       longitude: 18.590565,
     }
 
-    request(app).post('/api/v1/messages').body({
-      name: 'Bart',
-      message: 'Super App!',
-      latitude: 54.3854637,
-      longitude: 18.590565,
-    })
+    request(app)
+      .post('/api/v1/messages')
+      .body(result)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200, { result }, done)
   })
 })
