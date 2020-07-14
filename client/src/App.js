@@ -105,7 +105,7 @@ class App extends Component {
           longitude: this.state.location.lng,
         }),
       }).then((message) => {
-        this.setTimeout(() => {
+        setTimeout(() => {
           this.setState({ sendingMessage: false, sentMessage: true })
         }, 1000)
       })
@@ -175,7 +175,9 @@ class App extends Component {
               loop
               src='https://i.giphy.com/media/BCIRKxED2Y2JO/giphy.mp4'
             ></video>
-          ) : <CardText>Thanks for submitting!</CardText>}
+          ) : (
+            <CardText>Thanks for submitting!</CardText>
+          )}
         </Card>
       </div>
     )
