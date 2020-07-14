@@ -44,4 +44,8 @@ describe('GET /api/v1/messages', () => {
       })
       .expect(200, responseObj, done)
   })
+
+  it('can signup with international name', () => {
+    
+  })
 })
