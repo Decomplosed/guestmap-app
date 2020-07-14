@@ -76,6 +76,8 @@ class App extends Component {
     )
   }
 
+  formIsValid = () => {}
+
   formSubmitted = (event) => {
     event.preventDefault()
     console.log(this.state.userMessage)
