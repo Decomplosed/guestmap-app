@@ -91,6 +91,7 @@ class App extends Component {
     event.preventDefault()
 
     if (this.formIsValid()) {
+      this.setState({ sendingMessage: true })
       fetch(API_URL, {
         method: 'POST',
         headers: {
