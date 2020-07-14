@@ -89,7 +89,7 @@ class App extends Component {
   formSubmitted = (event) => {
     event.preventDefault()
 
-    if (!result.error) {
+    if (this.formIsValid()) {
       fetch(API_URL, {
         method: 'POST',
         headers: {
