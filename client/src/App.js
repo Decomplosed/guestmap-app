@@ -84,6 +84,19 @@ class App extends Component {
       message: this.state.userMessage.message,
     }
     const result = Joi.validate(userMessage, schema)
+    if (!result.error) {
+      fetch(API_URL, {
+        method: 'POST',
+        headers: {
+          'content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...userMessage,
+          latitude: this.state.location.lat,
+          longitude: this.state.location.lng,
+        }),
+      })
+    }
   }
 
   changeInputValue = (event) => {
