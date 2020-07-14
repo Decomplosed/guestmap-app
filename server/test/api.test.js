@@ -35,12 +35,12 @@ describe('GET /api/v1/messages', () => {
 
     request(app)
       .post('/api/v1/messages')
-      .send(result)
+      .send(requestObj)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
       .expect(res => {
-        res._id = '5f0c350fa148c772221963d9',
-        res.date = '2020-07-13T10:18:55.355Z'
+        res.body._id = '5f0c350fa148c772221963d9',
+        res.body.date = '2020-07-13T10:18:55.355Z'
       })
       .expect(200, responseObj, done)
   })
