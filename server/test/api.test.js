@@ -27,6 +27,12 @@ describe('GET /api/v1/messages', () => {
       longitude: 18.590565,
     }
 
+    const responseObj = {
+      ...requestObj,
+      _id: '5f0c350fa148c772221963d9',
+      date: '2020-07-13T10:18:55.355Z',
+    }
+
     request(app)
       .post('/api/v1/messages')
       .send(result)
