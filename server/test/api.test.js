@@ -58,5 +58,16 @@ describe('GET /api/v1/messages', () => {
       _id: '5f0c350fa148c772221963d9',
       date: '2020-07-13T10:18:55.355Z',
     }
+
+    request(app)
+      .post('/api/v1/messages')
+      .send(requestObj)
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(res => {
+        res.body._id = '5f0c350fa148c772221963d9',
+        res.body.date = '2020-07-13T10:18:55.355Z'
+      })
+      .expect(200, responseObj, done)
   })
 })
