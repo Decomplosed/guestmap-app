@@ -175,7 +175,7 @@ class App extends Component {
               loop
               src='https://i.giphy.com/media/BCIRKxED2Y2JO/giphy.mp4'
             ></video>
-          ) : null}
+          ) : <CardText>Thanks for submitting!</CardText>}
         </Card>
       </div>
     )
