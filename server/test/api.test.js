@@ -38,6 +38,10 @@ describe('GET /api/v1/messages', () => {
       .send(result)
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200, result, done)
+      .expect(res => {
+        res._id = '5f0c350fa148c772221963d9',
+        res.date = '2020-07-13T10:18:55.355Z'
+      })
+      .expect(200, responseObj, done)
   })
 })
