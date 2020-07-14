@@ -46,6 +46,7 @@ class App extends Component {
       message: '',
     },
     sendingMessage: false,
+    sentMessage: false,
   }
 
   componentDidMount() {
