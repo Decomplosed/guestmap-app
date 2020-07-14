@@ -76,16 +76,17 @@ class App extends Component {
     )
   }
 
-  formIsValid = () => {}
-
-  formSubmitted = (event) => {
-    event.preventDefault()
-    console.log(this.state.userMessage)
+  formIsValid = () => {
     const userMessage = {
       name: this.state.userMessage.name,
       message: this.state.userMessage.message,
     }
     const result = Joi.validate(userMessage, schema)
+  }
+
+  formSubmitted = (event) => {
+    event.preventDefault()
+
     if (!result.error) {
       fetch(API_URL, {
         method: 'POST',
