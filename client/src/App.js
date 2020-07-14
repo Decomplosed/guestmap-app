@@ -23,6 +23,11 @@ let myIcon = L.icon({
   popupAnchor: [0, -41],
 })
 
+const schema = Joi.object().keys({
+  name: Joi.string().min(1).max(100).required(),
+  message: Joi.string().min(1).max(500).required(),
+})
+
 class App extends Component {
   state = {
     location: {
