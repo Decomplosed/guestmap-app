@@ -107,7 +107,7 @@ class App extends Component {
       }).then((message) => {
         this.setTimeout(() => {
           this.setState({ sendingMessage: false, sentMessage: true })
-        })
+        }, 1000)
       })
     }
   }
