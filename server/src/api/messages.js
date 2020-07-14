@@ -15,7 +15,6 @@ const router = express.Router()
 
 router.get('/', (req, res) => {
   messages.find().then((allMessages) => {
-    console.log(allMessages)
     res.json(allMessages)
   })
 })
