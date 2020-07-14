@@ -96,7 +96,8 @@ class App extends Component {
           'content-type': 'application/json',
         },
         body: JSON.stringify({
-          ...userMessage,
+          name: this.state.userMessage.name,
+          message: this.state.userMessage.message,
           latitude: this.state.location.lat,
           longitude: this.state.location.lng,
         }),
