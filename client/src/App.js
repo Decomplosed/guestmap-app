@@ -169,6 +169,12 @@ class App extends Component {
                 Send
               </Button>
             </Form>
+          ) : this.sendingMessage ? (
+            <video
+              autoPlay
+              loop
+              src='https://i.giphy.com/media/BCIRKxED2Y2JO/giphy.mp4'
+            ></video>
           ) : null}
         </Card>
       </div>
