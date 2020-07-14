@@ -83,7 +83,7 @@ class App extends Component {
     }
     const result = Joi.validate(userMessage, schema)
 
-    return result.error && !this.state.haveUserLocation ? false : true
+    return !result.error && this.state.haveUserLocation ? true : false
   }
 
   formSubmitted = (event) => {
