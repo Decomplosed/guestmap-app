@@ -29,7 +29,7 @@ const schema = Joi.object().keys({
 })
 
 const API_URL =
-  window.location.hostname == 'localhost'
+  window.location.hostname === 'localhost'
     ? 'http://localhost:5000/api/v1/messages'
     : 'production-url-here'
 
@@ -159,11 +159,7 @@ class App extends Component {
                 placeholder='Message...'
               />
             </FormGroup>
-            <Button
-              type='submit'
-              color='info'
-              disabled={!this.formIsValid()}
-            >
+            <Button type='submit' color='info' disabled={!this.formIsValid()}>
               Send
             </Button>
           </Form>
