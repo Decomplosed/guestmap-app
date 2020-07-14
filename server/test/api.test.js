@@ -47,7 +47,7 @@ describe('GET /api/v1/messages', () => {
 
   it('can signup with international name', () => {
     const requestObj = {
-      name: 'Bart',
+      name: 'Ÿööhöö',
       message: 'Super App!',
       latitude: 54.3854637,
       longitude: 18.590565,
