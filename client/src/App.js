@@ -78,6 +78,7 @@ class App extends Component {
       name: this.state.userMessage.name,
       message: this.state.userMessage.message,
     }
+    const result = Joi.validate(userMessage, schema)
   }
 
   changeInputValue = (event) => {
