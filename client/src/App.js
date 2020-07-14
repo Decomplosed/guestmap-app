@@ -74,6 +74,10 @@ class App extends Component {
   formSubmitted = (event) => {
     event.preventDefault()
     console.log(this.state.userMessage)
+    const userMessage = {
+      name: this.state.userMessage.name,
+      message: this.state.userMessage.message,
+    }
   }
 
   changeInputValue = (event) => {
