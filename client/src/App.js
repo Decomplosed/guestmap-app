@@ -162,7 +162,7 @@ class App extends Component {
             <Button
               type='submit'
               color='info'
-              disabled={!this.state.haveUserLocation}
+              disabled={!this.formIsValid()}
             >
               Send
             </Button>
