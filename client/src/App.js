@@ -65,6 +65,7 @@ class App extends Component {
         fetch('https://ipapi.co/json')
           .then((res) => res.json())
           .then((location) => {
+            console.log(location)
             this.setState({
               location: {
                 lat: location.latitude,
@@ -169,7 +170,7 @@ class App extends Component {
                 Send
               </Button>
             </Form>
-          ) : this.sendingMessage ? (
+          ) : this.state.sendingMessage ? (
             <video
               autoPlay
               loop
