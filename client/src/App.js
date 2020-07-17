@@ -170,11 +170,10 @@ class App extends Component {
               </Button>
             </Form>
           ) : this.state.sendingMessage ? (
-            <video
-              autoPlay
-              loop
-              src='https://i.giphy.com/media/BCIRKxED2Y2JO/giphy.mp4'
-            ></video>
+            <img
+              alt='Loading...alert-danger'
+              src='https://vibranttheme.com/theme/brownie/assets/animated-icons/animat-compass.gif'
+            />
           ) : (
             <CardText>Thanks for submitting!</CardText>
           )}
