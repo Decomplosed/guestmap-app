@@ -151,7 +151,9 @@ class App extends Component {
               icon={myIcon}
             >
               <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
+                <em>
+                  {message.name} says {message.message}
+                </em>
               </Popup>
             </Marker>
           ))}
