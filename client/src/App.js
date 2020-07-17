@@ -63,7 +63,7 @@ class App extends Component {
       .then((res) => res.json())
       .then((messages) => {
         const messagesByLocation = {}
-        const messages = messages.reduce((all, message) => {}, [])
+        messages = messages.reduce((all, message) => {}, [])
 
         this.setState({ messages })
       })
