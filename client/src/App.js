@@ -145,6 +145,7 @@ class App extends Component {
               </Popup>
             </Marker>
           ) : null}
+          {this.state.messages.map(message => ())}
         </Map>
         <Card body className='messageForm'>
           <CardTitle>Message App!</CardTitle>
