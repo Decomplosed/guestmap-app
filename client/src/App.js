@@ -143,7 +143,9 @@ class App extends Component {
           <CardTitle>Message App!</CardTitle>
           <CardText>Say hi to other developers all around the world!</CardText>
           <CardText>Leave a message with your location!</CardText>
-          {!this.state.sendingMessage && !this.state.sentMessage ? (
+          {!this.state.sendingMessage &&
+          !this.state.sentMessage &&
+          this.state.haveUserLocation ? (
             <Form onSubmit={this.formSubmitted}>
               <FormGroup>
                 <Label for='name'>Name</Label>
@@ -169,7 +171,7 @@ class App extends Component {
                 Send
               </Button>
             </Form>
-          ) : this.state.sendingMessage ? (
+          ) : this.state.sendingMessage || !this.state.haveUserLocation ? (
             <img
               alt='Loading...alert-danger'
               src='https://vibranttheme.com/theme/brownie/assets/animated-icons/animat-compass.gif'
