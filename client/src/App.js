@@ -21,14 +21,14 @@ const userIcon = L.icon({
   iconUrl: userIconUrl,
   iconSize: [50, 82],
   iconAnchor: [25, 82],
-  popupAnchor: [0, -82],
+  popupAnchor: [0, -70],
 })
 
 const messageIcon = L.icon({
   iconUrl: messageIconUrl,
   iconSize: [50, 82],
   iconAnchor: [25, 82],
-  popupAnchor: [0, -82],
+  popupAnchor: [0, -70],
 })
 
 const schema = Joi.object().keys({
