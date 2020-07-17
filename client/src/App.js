@@ -12,7 +12,8 @@ import {
   Input,
   Button,
 } from 'reactstrap'
-import iconUrl from './user_location.svg'
+import userIconUrl from './user_location.svg'
+import messageIconUrl from './message_location.svg'
 
 import './App.css'
 
