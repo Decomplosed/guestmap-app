@@ -18,7 +18,14 @@ import messageIconUrl from './message_location.svg'
 import './App.css'
 
 const userIcon = L.icon({
-  iconUrl,
+  iconUrl: userIconUrl,
+  iconSize: [50, 82],
+  iconAnchor: [25, 82],
+  popupAnchor: [0, -82],
+})
+
+const messageIcon = L.icon({
+  iconUrl: messageIconUrl,
   iconSize: [50, 82],
   iconAnchor: [25, 82],
   popupAnchor: [0, -82],
