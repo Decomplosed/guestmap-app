@@ -139,11 +139,7 @@ class App extends Component {
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           />
           {this.state.haveUserLocation ? (
-            <Marker position={position} icon={myIcon}>
-              <Popup>
-                A pretty CSS3 popup. <br /> Easily customizable.
-              </Popup>
-            </Marker>
+            <Marker position={position} icon={myIcon} />
           ) : null}
           {this.state.messages.map((message) => (
             <Marker
