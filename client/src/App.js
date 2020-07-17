@@ -62,7 +62,7 @@ class App extends Component {
     fetch(API_URL)
       .then((res) => res.json())
       .then((messages) => {
-        const messagesByLocation = {}
+        const haveSeenLocation = {}
         messages = messages.reduce((all, message) => {}, [])
 
         this.setState({ messages })
