@@ -19,6 +19,7 @@ body {
   right: 10px;
 }
 
-video {
-  width: 100%;
+img {
+  width: 320px;
+  height: auto;
 }
