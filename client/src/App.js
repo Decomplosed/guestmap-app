@@ -63,7 +63,9 @@ class App extends Component {
       .then((res) => res.json())
       .then((messages) => {
         const haveSeenLocation = {}
-        messages = messages.reduce((all, message) => {}, [])
+        messages = messages.reduce((all, message) => {
+          if (haveSeenLocation[message.latitude + messages.longitude]) {}
+        }, [])
 
         this.setState({ messages })
       })
