@@ -147,12 +147,12 @@ class App extends Component {
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           />
           {this.state.haveUserLocation ? (
-            <Marker position={position} icon={myIcon} />
+            <Marker position={position} icon={userIcon} />
           ) : null}
           {this.state.messages.map((message) => (
             <Marker
               position={[message.latitude, message.longitude]}
-              icon={myIcon}
+              icon={messageIcon}
             >
               <Popup>
                 <em>
