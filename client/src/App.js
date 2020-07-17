@@ -151,6 +151,7 @@ class App extends Component {
           ) : null}
           {this.state.messages.map((message) => (
             <Marker
+              key={message._id}
               position={[message.latitude, message.longitude]}
               icon={messageIcon}
             >
