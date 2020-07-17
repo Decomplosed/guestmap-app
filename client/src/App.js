@@ -12,6 +12,7 @@ import {
   Input,
   Button,
 } from 'reactstrap'
+import iconUrl from './icons/chat_location.svg'
 
 import './App.css'
 
