@@ -146,7 +146,10 @@ class App extends Component {
             </Marker>
           ) : null}
           {this.state.messages.map((message) => (
-            <Marker position={} icon={myIcon}>
+            <Marker
+              position={[message.latitude, message.longitude]}
+              icon={myIcon}
+            >
               <Popup>
                 A pretty CSS3 popup. <br /> Easily customizable.
               </Popup>
