@@ -51,7 +51,11 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(API_URL).then((res) => res.json())
+    fetch(API_URL)
+      .then((res) => res.json())
+      .then((messages) => {
+        this.setState({ messages })
+      })
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
