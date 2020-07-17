@@ -12,11 +12,11 @@ import {
   Input,
   Button,
 } from 'reactstrap'
-import iconUrl from './chat_location.svg'
+import iconUrl from './user_location.svg'
 
 import './App.css'
 
-let myIcon = L.icon({
+const userIcon = L.icon({
   iconUrl,
   iconSize: [50, 82],
   iconAnchor: [25, 82],
