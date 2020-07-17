@@ -18,9 +18,9 @@ import './App.css'
 
 let myIcon = L.icon({
   iconUrl,
-  iconSize: [25, 41],
-  iconAnchor: [12.5, 41],
-  popupAnchor: [0, -41],
+  iconSize: [50, 82],
+  iconAnchor: [25, 82],
+  popupAnchor: [0, -82],
 })
 
 const schema = Joi.object().keys({
