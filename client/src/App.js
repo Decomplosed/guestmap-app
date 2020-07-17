@@ -64,7 +64,13 @@ class App extends Component {
       .then((messages) => {
         const haveSeenLocation = {}
         messages = messages.reduce((all, message) => {
-          if (haveSeenLocation[message.latitude + messages.longitude]) {}
+          const key = message.latitude + messages.longitude
+          if (haveSeenLocation[message.latitude + messages.longitude]) {
+            haveSeenLocation[message.latitude + messages.longitude].names = []
+            haveSeenLocation[
+              message.latitude + messages.longitude
+            ].messages = []
+          }
         }, [])
 
         this.setState({ messages })
