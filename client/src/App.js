@@ -73,8 +73,8 @@ class App extends Component {
             haveSeenLocation[key].names = message
             all.push(message)
           }
+          return all
         }, [])
-
         this.setState({ messages })
       })
 
