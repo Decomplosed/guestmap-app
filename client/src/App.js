@@ -111,6 +111,12 @@ class App extends Component {
     name = name.trim()
     message = message.trim()
 
+    const validMessage =
+      name.length > 0 &&
+      name.length <= 500 &&
+      message.length > 0 &&
+      message.length < 500
+
     return !result.error && this.state.haveUserLocation ? true : false
   }
 
