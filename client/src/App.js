@@ -174,7 +174,7 @@ class App extends Component {
                 </p>
                 {message.otherMessages
                   ? message.otherMessages.map((message) => (
-                      <p>
+                      <p key={message._id}>
                         <em>{message.name}</em>: {message.message}
                       </p>
                     ))
