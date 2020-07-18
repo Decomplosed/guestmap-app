@@ -107,10 +107,7 @@ class App extends Component {
   }
 
   formIsValid = () => {
-    const userMessage = {
-      name: this.state.userMessage.name,
-      message: this.state.userMessage.message,
-    }
+    const { name, message } = this.state.userMessage
     const result = Joi.validate(userMessage, schema)
 
     return !result.error && this.state.haveUserLocation ? true : false
