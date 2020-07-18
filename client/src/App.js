@@ -171,9 +171,7 @@ class App extends Component {
               icon={messageIcon}
             >
               <Popup>
-                <em>
-                  {message.name} says {message.message}
-                </em>
+                <em>{message.name}</em>: {message.message}
               </Popup>
             </Marker>
           ))}
