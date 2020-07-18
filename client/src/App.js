@@ -69,6 +69,9 @@ class App extends Component {
             haveSeenLocation[key].names = haveSeenLocation[key].names || []
             haveSeenLocation[key].messages =
               haveSeenLocation[key].messages || []
+          } else {
+            haveSeenLocation[key].names = message
+            all.push(message)
           }
         }, [])
 
