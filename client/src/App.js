@@ -172,6 +172,13 @@ class App extends Component {
                 <p>
                   <em>{message.name}</em>: {message.message}
                 </p>
+                {message.otherMessages
+                  ? message.otherMessages.map((message) => (
+                      <p>
+                        <em>{message.name}</em>: {message.message}
+                      </p>
+                    ))
+                  : ''}
               </Popup>
             </Marker>
           ))}
