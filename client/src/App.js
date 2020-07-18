@@ -107,7 +107,7 @@ class App extends Component {
   }
 
   formIsValid = () => {
-    const { name, message } = this.state.userMessage
+    let { name, message } = this.state.userMessage
     name = name.trim()
     message = message.trim()
 
