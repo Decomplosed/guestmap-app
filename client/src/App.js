@@ -85,22 +85,7 @@ class App extends Component {
 
     if (this.formIsValid()) {
       this.setState({ sendingMessage: true })
-      fetch(API_URL, {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: this.state.userMessage.name,
-          message: this.state.userMessage.message,
-          latitude: this.state.location.lat,
-          longitude: this.state.location.lng,
-        }),
-      }).then((message) => {
-        setTimeout(() => {
-          this.setState({ sendingMessage: false, sentMessage: true })
-        }, 3000)
-      })
+      
     }
   }
 

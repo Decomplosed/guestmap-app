@@ -47,3 +47,17 @@ export function getLocation() {
     )
   })
 }
+
+export function sendMessage(message) {
+  return fetch(API_URL, {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/json',
+    },
+    body: JSON.stringify(message),
+  }).then((message) => {
+    setTimeout(() => {
+      this.setState({ sendingMessage: false, sentMessage: true })
+    }, 3000)
+  })
+}
