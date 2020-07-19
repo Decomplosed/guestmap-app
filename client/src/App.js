@@ -52,13 +52,12 @@ class App extends Component {
       this.setState({ messages })
     })
 
-    this.setState({
-      location: {
-        lat: location.latitude,
-        lng: location.longitude,
-      },
-      haveUserLocation: true,
-      zoom: 10,
+    getLocation().then((location) => {
+      this.setState({
+        location,
+        haveUserLocation: true,
+        zoom: 10,
+      })
     })
   }
 
