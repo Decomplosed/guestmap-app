@@ -144,6 +144,8 @@ class App extends Component {
           sendingMessage={this.state.sendingMessage}
           sentMessage={this.state.sentMessage}
           haveUserLocation={this.state.haveUserLocation}
+          formSubmitted={this.formSubmitted}
+          changeInputValue={this.changeInputValue}
         />
       </div>
     )
