@@ -1,4 +1,4 @@
-function getMessages() {
+export function getMessages() {
   return fetch(API_URL)
     .then((res) => res.json())
     .then((messages) => {
