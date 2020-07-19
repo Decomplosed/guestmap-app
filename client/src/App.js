@@ -140,6 +140,11 @@ class App extends Component {
             </Marker>
           ))}
         </Map>
+        <MessageCard
+          sendingMessage={this.state.sendingMessage}
+          sentMessage={this.state.sentMessage}
+          haveUserLocation={this.state.haveUserLocation}
+        />
       </div>
     )
   }
