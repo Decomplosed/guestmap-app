@@ -31,11 +31,6 @@ const messageIcon = L.icon({
   popupAnchor: [0, -70],
 })
 
-const schema = Joi.object().keys({
-  name: Joi.string().min(1).max(100).required(),
-  message: Joi.string().min(1).max(500).required(),
-})
-
 const API_URL =
   window.location.hostname === 'localhost'
     ? 'http://localhost:5000/api/v1/messages'
