@@ -146,6 +146,7 @@ class App extends Component {
           haveUserLocation={this.state.haveUserLocation}
           formSubmitted={this.formSubmitted}
           changeInputValue={this.changeInputValue}
+          formIsValid={this.formIsValid}
         />
       </div>
     )
