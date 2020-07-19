@@ -55,9 +55,5 @@ export function sendMessage(message) {
       'content-type': 'application/json',
     },
     body: JSON.stringify(message),
-  }).then((message) => {
-    setTimeout(() => {
-      this.setState({ sendingMessage: false, sentMessage: true })
-    }, 3000)
   })
 }
