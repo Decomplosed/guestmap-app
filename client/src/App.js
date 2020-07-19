@@ -26,8 +26,6 @@ const userIcon = L.icon({
 const messageIcon = L.icon({
   iconUrl: messageIconUrl,
   iconSize: [50, 82],
-  iconAnchor: [25, 82],
-  popupAnchor: [0, -70],
 })
 
 const API_URL =
