@@ -1,16 +1,6 @@
 import React, { Component } from 'react'
 import L from 'leaflet'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
-import {
-  Card,
-  CardTitle,
-  CardText,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  Button,
-} from 'reactstrap'
 import userIconUrl from './user_location.svg'
 import messageIconUrl from './message_location.svg'
 
