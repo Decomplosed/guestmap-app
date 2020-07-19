@@ -1,3 +1,8 @@
+const API_URL =
+  window.location.hostname === 'localhost'
+    ? 'http://localhost:5000/api/v1/messages'
+    : 'production-url-here'
+
 export function getMessages() {
   return fetch(API_URL)
     .then((res) => res.json())
