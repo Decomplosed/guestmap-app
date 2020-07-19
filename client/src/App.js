@@ -48,24 +48,9 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch(API_URL)
-      .then((res) => res.json())
-      .then((messages) => {
-        const haveSeenLocation = {}
-        messages = messages.reduce((all, message) => {
-          const key = `${message.latitude}${messages.longitude}`
-          if (haveSeenLocation[key]) {
-            haveSeenLocation[key].otherMessages =
-              haveSeenLocation[key].otherMessages || []
-            haveSeenLocation[key].otherMessages.push(message)
-          } else {
-            haveSeenLocation[key] = message
-            all.push(message)
-          }
-          return all
-        }, [])
-        this.setState({ messages })
-      })
+    getMessages().then((messages) => {
+      this.setState({ messages })
+    })
 
     navigator.geolocation.getCurrentPosition(
       (position) => {
