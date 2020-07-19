@@ -14,7 +14,7 @@ import {
 import userIconUrl from './user_location.svg'
 import messageIconUrl from './message_location.svg'
 
-import { API_URL, getMessages } from './API'
+import { getMessages } from './API'
 
 import './App.css'
 
