@@ -85,7 +85,13 @@ class App extends Component {
 
     if (this.formIsValid()) {
       this.setState({ sendingMessage: true })
-      
+
+      const message = {
+        name: this.state.userMessage.name,
+        message: this.state.userMessage.message,
+        latitude: this.state.location.lat,
+        longitude: this.state.location.lng,
+      }
     }
   }
 
