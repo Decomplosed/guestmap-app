@@ -152,7 +152,7 @@ class App extends Component {
       <div className='map'>
         <Map className='map' center={position} zoom={this.state.zoom}>
           <TileLayer
-            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors and Chat location by Iconika from the Noun Project'
             url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
           />
           {this.state.haveUserLocation ? (
