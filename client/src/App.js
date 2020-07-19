@@ -93,7 +93,11 @@ class App extends Component {
         longitude: this.state.location.lng,
       }
 
-      sendMessage(message).then(result => {})
+      sendMessage(message).then((result) => {
+        setTimeout(() => {
+          this.setState({ sendingMessage: false, sentMessage: true })
+        }, 3000)
+      })
     }
   }
 
