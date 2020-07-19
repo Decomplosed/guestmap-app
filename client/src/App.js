@@ -30,11 +30,6 @@ const messageIcon = L.icon({
   iconSize: [50, 82],
 })
 
-const API_URL =
-  window.location.hostname === 'localhost'
-    ? 'http://localhost:5000/api/v1/messages'
-    : 'production-url-here'
-
 class App extends Component {
   state = {
     location: {
