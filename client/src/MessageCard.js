@@ -7,11 +7,11 @@ export default (props) => {
       <CardText>Say hi to other developers all around the world!</CardText>
       <CardText>Leave a message with your location!</CardText>
       {!props.sendingMessage && !props.sentMessage && props.haveUserLocation ? (
-        <Form onSubmit={this.formSubmitted}>
+        <Form onSubmit={props.formSubmitted}>
           <FormGroup>
             <Label for='name'>Name</Label>
             <Input
-              onChange={this.changeInputValue}
+              onChange={props.changeInputValue}
               type='text'
               name='name'
               id='name'
@@ -21,14 +21,14 @@ export default (props) => {
           <FormGroup>
             <Label for='message'>Message</Label>
             <Input
-              onChange={this.changeInputValue}
+              onChange={props.changeInputValue}
               type='textarea'
               name='message'
               id='message'
               placeholder='Message...'
             />
           </FormGroup>
-          <Button type='submit' color='info' disabled={!this.formIsValid()}>
+          <Button type='submit' color='info' disabled={!props.formIsValid()}>
             Send
           </Button>
         </Form>
