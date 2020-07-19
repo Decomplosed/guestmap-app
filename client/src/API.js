@@ -22,3 +22,22 @@ export function getMessages() {
       }, [])
     })
 }
+
+export function getLocation() {
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      {lat: position.coords.latitude,
+        lng: position.coords.longtitude}
+    },
+    () => {
+      fetch('https://ipapi.co/json')
+        .then((res) => res.json())
+        .then((location) => {
+          {
+            lat: location.latitude,
+            lng: location.longitude
+          }
+        })
+    }
+  )
+}

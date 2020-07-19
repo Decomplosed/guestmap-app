@@ -52,32 +52,14 @@ class App extends Component {
       this.setState({ messages })
     })
 
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        this.setState({
-          location: {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          },
-          haveUserLocation: true,
-          zoom: 10,
-        })
+    this.setState({
+      location: {
+        lat: location.latitude,
+        lng: location.longitude,
       },
-      () => {
-        fetch('https://ipapi.co/json')
-          .then((res) => res.json())
-          .then((location) => {
-            this.setState({
-              location: {
-                lat: location.latitude,
-                lng: location.longitude,
-              },
-              haveUserLocation: true,
-              zoom: 10,
-            })
-          })
-      }
-    )
+      haveUserLocation: true,
+      zoom: 10,
+    })
   }
 
   formIsValid = () => {
