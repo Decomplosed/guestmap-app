@@ -6,9 +6,7 @@ export default (props) => {
       <CardTitle>Message App!</CardTitle>
       <CardText>Say hi to other developers all around the world!</CardText>
       <CardText>Leave a message with your location!</CardText>
-      {!this.state.sendingMessage &&
-      !this.state.sentMessage &&
-      this.state.haveUserLocation ? (
+      {!props.sendingMessage && !props.sentMessage && props.haveUserLocation ? (
         <Form onSubmit={this.formSubmitted}>
           <FormGroup>
             <Label for='name'>Name</Label>
@@ -34,7 +32,7 @@ export default (props) => {
             Send
           </Button>
         </Form>
-      ) : this.state.sendingMessage || !this.state.haveUserLocation ? (
+      ) : props.sendingMessage || !props.haveUserLocation ? (
         <img
           alt='Loading...alert-danger'
           src='https://vibranttheme.com/theme/brownie/assets/animated-icons/animat-compass.gif'
