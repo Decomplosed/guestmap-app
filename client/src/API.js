@@ -24,20 +24,26 @@ export function getMessages() {
 }
 
 export function getLocation() {
-  navigator.geolocation.getCurrentPosition(
-    (position) => {
-      {lat: position.coords.latitude,
-        lng: position.coords.longtitude}
-    },
-    () => {
-      fetch('https://ipapi.co/json')
-        .then((res) => res.json())
-        .then((location) => {
-          {
-            lat: location.latitude,
-            lng: location.longitude
-          }
+  return new Promise((resolve) => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        resolve({
+          lat: position.coords.latitude,
+          lng: position.coords.longtitude,
         })
-    }
-  )
+      },
+      () => {
+        resolve(
+          fetch('https://ipapi.co/json')
+            .then((res) => res.json())
+            .then((location) => {
+              return {
+                lat: location.latitude,
+                lng: location.longitude,
+              }
+            })
+        )
+      }
+    )
+  })
 }
