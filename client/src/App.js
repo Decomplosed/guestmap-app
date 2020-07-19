@@ -92,6 +92,8 @@ class App extends Component {
         latitude: this.state.location.lat,
         longitude: this.state.location.lng,
       }
+
+      sendMessage(message).then(result => {})
     }
   }
 
